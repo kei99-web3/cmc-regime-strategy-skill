@@ -1,8 +1,8 @@
 ---
 type: final_pre_submission_checklist
 target: BNB HACK / CMC Regime Strategy Skill
-updated: 2026-06-06
-status: ready_before_external_actions
+updated: 2026-06-07
+status: ready_for_dorahacks_form_not_submitted
 ---
 
 # Final Pre-Submission Checklist
@@ -15,8 +15,10 @@ status: ready_before_external_actions
 - [x] CMC Keyless Public API proof exists.
 - [x] CMC Basic API proof exists.
 - [x] Public repo candidate exists locally.
+- [x] Public GitHub repository exists.
 - [x] DoraHacks field map exists.
 - [x] Demo video final script exists.
+- [x] Demo video uploaded.
 - [x] Publication approval packet exists.
 
 ## Verification
@@ -31,8 +33,6 @@ status: ready_before_external_actions
 
 ## External Actions Still Not Done
 
-- [ ] Create or push public GitHub repository.
-- [ ] Upload demo video.
 - [ ] Fill DoraHacks form.
 - [ ] Submit DoraHacks project.
 - [ ] Configure CMC MCP.
@@ -44,6 +44,5 @@ status: ready_before_external_actions
 
 Before moving forward, user must approve:
 
-1. public repo name and publication;
-2. demo video recording/upload;
-3. DoraHacks form filling and final submit.
+1. DoraHacks form filling;
+2. DoraHacks final submit.
