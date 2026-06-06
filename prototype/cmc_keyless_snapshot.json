@@ -1,0 +1,85 @@
+{
+  "asOf": "2026-06-06T13:30:31.628Z",
+  "sourceModel": "CMC Keyless Public API trial endpoint; no API key, no signup, read-only market data.",
+  "sourceUrls": {
+    "quotes": "https://pro-api.coinmarketcap.com/trial-pro-api/v3/cryptocurrency/quotes/latest?id=1839,7186,5964&convert=USD",
+    "globalMetrics": "https://pro-api.coinmarketcap.com/trial-pro-api/v1/global-metrics/quotes/latest?convert=USD",
+    "fearGreed": "https://pro-api.coinmarketcap.com/trial-pro-api/v3/fear-and-greed/latest"
+  },
+  "symbols": [
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "priceUsd": 575.01038279,
+      "marketCapRank": 4,
+      "volume24hUsd": 2382001211.72,
+      "volumeChange24hPct": 27.4167,
+      "priceChange24hPct": -3.2177,
+      "priceChange7dPct": -14.4587,
+      "rsi14": 39,
+      "trendScore": 0.213,
+      "liquidityScore": 0.9525,
+      "derivativesFundingPct": 0,
+      "openInterestChange24hPct": 0,
+      "socialMomentumScore": 0.5785,
+      "newsMomentumScore": 0.5405,
+      "cmcKeylessSource": {
+        "id": 1839,
+        "slug": "bnb",
+        "lastUpdated": "2026-06-06T13:29:00.000Z"
+      }
+    },
+    {
+      "symbol": "CAKE",
+      "name": "PancakeSwap",
+      "priceUsd": 1.1933659,
+      "marketCapRank": 88,
+      "volume24hUsd": 45434457.27,
+      "volumeChange24hPct": 20.6477,
+      "priceChange24hPct": -0.7908,
+      "priceChange7dPct": -14.8463,
+      "rsi14": 42,
+      "trendScore": 0.2681,
+      "liquidityScore": 0.7028,
+      "derivativesFundingPct": 0,
+      "openInterestChange24hPct": 0,
+      "socialMomentumScore": 0.5221,
+      "newsMomentumScore": 0.4906,
+      "cmcKeylessSource": {
+        "id": 7186,
+        "slug": "pancakeswap",
+        "lastUpdated": "2026-06-06T13:28:00.000Z"
+      }
+    },
+    {
+      "symbol": "TWT",
+      "name": "Trust Wallet Token",
+      "priceUsd": 0.35485127,
+      "marketCapRank": 144,
+      "volume24hUsd": 10905343.95,
+      "volumeChange24hPct": -9.36,
+      "priceChange24hPct": -9.4528,
+      "priceChange7dPct": -21.1216,
+      "rsi14": 28,
+      "trendScore": 0.05,
+      "liquidityScore": 0.5735,
+      "derivativesFundingPct": 0,
+      "openInterestChange24hPct": 0,
+      "socialMomentumScore": 0.35,
+      "newsMomentumScore": 0.4647,
+      "cmcKeylessSource": {
+        "id": 5964,
+        "slug": "trust-wallet-token",
+        "lastUpdated": "2026-06-06T13:29:00.000Z"
+      }
+    }
+  ],
+  "marketContext": {
+    "btcDominancePct": 58.2375,
+    "totalMarketCapChange24hPct": -2.3029,
+    "totalVolumeChange24hPct": 12.9015,
+    "fearGreed": 13,
+    "stablecoinLiquidityTrend": "rising",
+    "macroRisk": "moderate"
+  }
+}

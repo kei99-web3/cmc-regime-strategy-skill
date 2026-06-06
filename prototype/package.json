@@ -1,0 +1,17 @@
+{
+  "name": "cmc-regime-strategy-skill",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Fixture-backed CMC Strategy Skill MVP for BNB HACK Track 2.",
+  "scripts": {
+    "test": "node src/strategy_skill.test.js",
+    "fixture": "node src/generate_demo_fixture.js",
+    "verify": "node src/verify_demo_fixture.js",
+    "validate": "node src/validate_strategy_spec.js",
+    "replay": "node src/replay_backtest_stub.js",
+    "report": "node src/generate_human_strategy_report.js",
+    "keyless": "node --use-system-ca src/fetch_cmc_keyless_snapshot.js",
+    "basic": "node --use-system-ca src/fetch_cmc_basic_snapshot.js",
+    "packcheck": "node src/validate_local_package.js"
+  }
+}

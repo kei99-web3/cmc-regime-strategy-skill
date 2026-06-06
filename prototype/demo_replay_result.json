@@ -1,0 +1,11 @@
+{
+  "replayType": "fixture_backtest_stub",
+  "benchmark": "BNB",
+  "windowDays": 7,
+  "projectedReturnPct": 5.09,
+  "maxDrawdownPct": 2.7,
+  "sharpeLikeRatio": 1.89,
+  "winRateEstimatePct": 64.63,
+  "ruleAdherence": 1,
+  "caveat": "Fixture replay is a local proof of spec shape only; real historical CMC data requires approval-gated API/MCP access."
+}

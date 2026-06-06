@@ -1,0 +1,65 @@
+{
+  "asOf": "2026-06-06T12:00:00Z",
+  "sourceModel": "fixture-backed CMC-style market snapshot",
+  "symbols": [
+    {
+      "symbol": "BNB",
+      "name": "BNB",
+      "priceUsd": 682.4,
+      "marketCapRank": 5,
+      "volume24hUsd": 1840000000,
+      "volumeChange24hPct": 18.4,
+      "priceChange24hPct": 2.8,
+      "priceChange7dPct": 9.6,
+      "rsi14": 63,
+      "trendScore": 0.74,
+      "liquidityScore": 0.91,
+      "derivativesFundingPct": 0.012,
+      "openInterestChange24hPct": 8.7,
+      "socialMomentumScore": 0.68,
+      "newsMomentumScore": 0.61
+    },
+    {
+      "symbol": "CAKE",
+      "name": "PancakeSwap",
+      "priceUsd": 3.44,
+      "marketCapRank": 142,
+      "volume24hUsd": 82000000,
+      "volumeChange24hPct": 41.2,
+      "priceChange24hPct": 5.1,
+      "priceChange7dPct": 14.8,
+      "rsi14": 69,
+      "trendScore": 0.79,
+      "liquidityScore": 0.67,
+      "derivativesFundingPct": 0.018,
+      "openInterestChange24hPct": 11.5,
+      "socialMomentumScore": 0.73,
+      "newsMomentumScore": 0.55
+    },
+    {
+      "symbol": "TWT",
+      "name": "Trust Wallet Token",
+      "priceUsd": 1.36,
+      "marketCapRank": 111,
+      "volume24hUsd": 39000000,
+      "volumeChange24hPct": 12.6,
+      "priceChange24hPct": 0.4,
+      "priceChange7dPct": 3.1,
+      "rsi14": 54,
+      "trendScore": 0.48,
+      "liquidityScore": 0.58,
+      "derivativesFundingPct": 0.004,
+      "openInterestChange24hPct": 1.9,
+      "socialMomentumScore": 0.44,
+      "newsMomentumScore": 0.38
+    }
+  ],
+  "marketContext": {
+    "btcDominancePct": 51.8,
+    "totalMarketCapChange24hPct": 1.9,
+    "totalVolumeChange24hPct": 15.2,
+    "fearGreed": 68,
+    "stablecoinLiquidityTrend": "rising",
+    "macroRisk": "moderate"
+  }
+}

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CMC Regime Strategy Skill</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #14212b;
+      --muted: #5b6770;
+      --line: #ccd6dd;
+      --panel: #f6f8fa;
+      --green: #137a4b;
+      --blue: #2459a6;
+      --gold: #9a6a00;
+    }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #ffffff;
+      line-height: 1.5;
+    }
+    header {
+      padding: 28px 36px 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    main { padding: 24px 36px 40px; max-width: 1180px; }
+    h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: 0; }
+    h2 { margin: 0 0 12px; font-size: 18px; }
+    p { margin: 0 0 12px; color: var(--muted); }
+    .meta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .pill { border: 1px solid var(--line); border-radius: 999px; padding: 5px 10px; font-size: 13px; background: #fff; }
+    .grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 18px; align-items: start; }
+    section { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 18px; }
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .metric-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .metric { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 12px; min-height: 70px; }
+    .metric strong { display: block; font-size: 18px; color: var(--ink); }
+    .metric span { color: var(--muted); font-size: 13px; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #0f1720; color: #e9f0f5; padding: 16px; border-radius: 8px; font-size: 12px; max-height: 520px; overflow: auto; }
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
+    th { background: #eef2f5; }
+    .ok { color: var(--green); font-weight: 700; }
+    .warn { color: var(--gold); font-weight: 700; }
+    .blue { color: var(--blue); font-weight: 700; }
+    .small { font-size: 13px; }
+    .mono { font-family: "Cascadia Mono", Consolas, monospace; }
+    @media (max-width: 820px) {
+      header, main { padding-left: 18px; padding-right: 18px; }
+      .grid, .metric-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CMC Regime Strategy Skill</h1>
+    <p>BNB HACK Track 2 concept: a CMC-native skill that turns market data into a backtestable, risk-bounded strategy spec. No live trading, no wallet, no transaction.</p>
+    <div class="meta">
+      <span class="pill">Track 2: Strategy Skills</span>
+      <span class="pill">CMC Agent Hub / Data MCP ready</span>
+      <span class="pill">Backtestable spec</span>
+      <span class="pill">Local fixture demo</span>
+    </div>
+  </header>
+  <main>
+    <div class="grid">
+      <div>
+        <section>
+          <h2>Judge Flow</h2>
+          <div class="panel">
+            <p><span class="blue">1.</span> User asks for a BNB ecosystem strategy for the next 7 days.</p>
+            <p><span class="blue">2.</span> The skill reads CMC-style quotes, technicals, derivatives, social/news, and market context.</p>
+            <p><span class="blue">3.</span> It classifies the regime and emits a strategy spec with entry, exit, risk, invalidation, and backtest instructions.</p>
+            <p><span class="blue">4.</span> It stops before Trust Wallet, BNB execution, x402 payment, or any transaction.</p>
+          </div>
+        </section>
+        <section>
+          <h2>Generated Strategy Summary</h2>
+          <div class="metric-grid">
+            <div class="metric"><strong>momentum_expansion</strong><span>Market regime</span></div>
+            <div class="metric"><strong>0.56</strong><span>Regime confidence</span></div>
+            <div class="metric"><strong>3</strong><span>Max open positions</span></div>
+            <div class="metric"><strong>1.5%</strong><span>Max portfolio risk</span></div>
+            <div class="metric"><strong>5.09%</strong><span>Fixture projected return</span></div>
+            <div class="metric"><strong>2.7%</strong><span>Fixture max drawdown</span></div>
+          </div>
+        </section>
+        <section>
+          <h2>Selected Universe</h2>
+          <table>
+            <thead><tr><th>Asset</th><th>Score</th><th>Why Included</th><th>Boundary</th></tr></thead>
+            <tbody>
+              <tr><td>CAKE</td><td class="mono">0.7565</td><td>High trend, strong volume expansion, acceptable liquidity.</td><td>No trade. Spec only.</td></tr>
+              <tr><td>BNB</td><td class="mono">0.7158</td><td>Deep liquidity and positive trend support benchmark-relative rotation.</td><td>No wallet connection.</td></tr>
+              <tr><td>TWT</td><td class="mono">0.491</td><td>Lower score but included within max risk and BNB ecosystem relevance.</td><td>No transaction.</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section>
+          <h2>Replay Stub</h2>
+          <table>
+            <tbody>
+              <tr><th>Replay type</th><td class="mono">fixture_backtest_stub</td></tr>
+              <tr><th>Benchmark</th><td>BNB</td></tr>
+              <tr><th>Window</th><td>7 days</td></tr>
+              <tr><th>Risk-adjusted ratio</th><td class="mono">1.89</td></tr>
+              <tr><th>Win-rate estimate</th><td class="mono">64.63%</td></tr>
+              <tr><th>Rule adherence</th><td class="mono">1.00</td></tr>
+            </tbody>
+          </table>
+          <p class="small">Fixture replay is a local proof of spec shape only; real historical CMC data requires approval-gated API/MCP access.</p>
+        </section>
+      </div>
+      <div>
+        <section>
+          <h2>Submission Boundary</h2>
+          <div class="panel">
+            <p class="ok">Local proof: strategy spec generation, risk limits, and no-live-trading boundary.</p>
+            <p class="warn">Approval required: DoraHacks registration, public repo, CMC API key, x402, Trust Wallet, BNB execution, final submission.</p>
+          </div>
+        </section>
+        <section>
+          <h2>Spec Preview</h2>
+          <pre>{
+  "skillName": "CMC Regime Strategy Skill",
+  "track": "BNB HACK Track 2 - Strategy Skills",
+  "marketRegime": "momentum_expansion",
+  "strategy": {
+    "objective": "Generate a backtestable strategy spec without executing trades.",
+    "risk": {
+      "maxPortfolioRiskPct": 1.5,
+      "maxPositionRiskPct": 0.5,
+      "maxOpenPositions": 3
+    },
+    "backtest": {
+      "windowDays": 7,
+      "benchmark": "BNB",
+      "requiredMetrics": ["return", "max_drawdown", "sharpe_like_ratio", "win_rate", "rule_adherence"]
+    }
+  },
+  "dataBoundary": {
+    "noApiKeyUsed": true,
+    "noLiveTrading": true,
+    "noWalletConnection": true,
+    "noTransaction": true
+  }
+}</pre>
+        </section>
+        <section>
+          <h2>Local Verification</h2>
+          <div class="panel">
+            <p><span class="ok">Passed:</span> npm test, fixture generation, fixture verification, strategy schema validation, replay stub, and local package gate.</p>
+            <p class="small mono">npm run packcheck</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

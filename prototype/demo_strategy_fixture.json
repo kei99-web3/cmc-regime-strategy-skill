@@ -1,0 +1,107 @@
+{
+  "specVersion": "0.1.0",
+  "skillName": "CMC Regime Strategy Skill",
+  "track": "BNB HACK Track 2 - Strategy Skills",
+  "generatedAt": "2026-06-06T12:00:00.000Z",
+  "dataBoundary": {
+    "source": "fixture-backed CMC-style market snapshot",
+    "noApiKeyUsed": true,
+    "noLiveTrading": true,
+    "noWalletConnection": true,
+    "noTransaction": true
+  },
+  "marketRegime": {
+    "label": "momentum_expansion",
+    "confidence": 0.56,
+    "reason": "Trend, volume, and sentiment support risk-on continuation without extreme RSI."
+  },
+  "strategy": {
+    "name": "momentum_expansion_bnb_ecosystem_rotation",
+    "objective": "Generate a backtestable strategy spec for an autonomous trading agent without executing trades.",
+    "universe": [
+      {
+        "symbol": "CAKE",
+        "name": "PancakeSwap",
+        "strategyScore": 0.7565,
+        "rationale": [
+          "trend=0.79",
+          "liquidity=0.67",
+          "volumeChange24h=41.2%",
+          "rsi14=69"
+        ]
+      },
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "strategyScore": 0.7158,
+        "rationale": [
+          "trend=0.74",
+          "liquidity=0.91",
+          "volumeChange24h=18.4%",
+          "rsi14=63"
+        ]
+      },
+      {
+        "symbol": "TWT",
+        "name": "Trust Wallet Token",
+        "strategyScore": 0.491,
+        "rationale": [
+          "trend=0.48",
+          "liquidity=0.58",
+          "volumeChange24h=12.6%",
+          "rsi14=54"
+        ]
+      }
+    ],
+    "signals": [
+      "CMC quotes/latest style price and volume momentum",
+      "CMC technical indicator style RSI and trend score",
+      "CMC derivatives style funding and open-interest change",
+      "CMC social/news momentum style inputs"
+    ],
+    "entryRules": [
+      "Enter only assets in the selected universe.",
+      "Require positive 24h and 7d price momentum.",
+      "Require volume expansion above the market-context baseline.",
+      "Reject entries if RSI exceeds 72 or liquidity score falls below 0.55."
+    ],
+    "exitRules": [
+      "Exit if asset closes below 3-day VWAP or loses 4.5% from entry.",
+      "Scale out 50% at 1.8R and trail the remainder by 2-day low."
+    ],
+    "invalidationRules": [
+      "Invalidate if total market volume falls by more than 20% or BTC dominance spikes above 53%."
+    ],
+    "risk": {
+      "maxPortfolioRiskPct": 1.5,
+      "maxPositionRiskPct": 0.5,
+      "maxOpenPositions": 3,
+      "stopLossRule": "Exit if asset closes below 3-day VWAP or loses 4.5% from entry.",
+      "takeProfitRule": "Scale out 50% at 1.8R and trail the remainder by 2-day low.",
+      "invalidationRule": "Invalidate if total market volume falls by more than 20% or BTC dominance spikes above 53%."
+    },
+    "backtest": {
+      "windowDays": 7,
+      "benchmark": "BNB",
+      "requiredMetrics": [
+        "return",
+        "max_drawdown",
+        "sharpe_like_ratio",
+        "win_rate",
+        "rule_adherence"
+      ],
+      "replayInstruction": "Replay against historical CMC-style snapshots; do not execute live orders."
+    }
+  },
+  "sponsorCapabilityMapping": {
+    "coinMarketCap": [
+      "Agent Hub",
+      "Data API",
+      "Data MCP",
+      "Skills Marketplace"
+    ],
+    "x402": "Optional pay-per-call premium data access design; not used in local fixture.",
+    "trustWallet": "Future execution consumer only; not used in local fixture.",
+    "bnbChain": "Future execution venue only; not used in local fixture."
+  }
+}

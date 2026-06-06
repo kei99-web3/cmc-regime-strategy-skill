@@ -1,0 +1,96 @@
+{
+  "specVersion": "0.1.0",
+  "skillName": "CMC Regime Strategy Skill",
+  "track": "BNB HACK Track 2 - Strategy Skills",
+  "generatedAt": "2026-06-06T12:00:00.000Z",
+  "dataBoundary": {
+    "source": "CMC Keyless Public API trial endpoint; no API key, no signup, read-only market data.",
+    "noApiKeyUsed": true,
+    "noLiveTrading": true,
+    "noWalletConnection": true,
+    "noTransaction": true
+  },
+  "marketRegime": {
+    "label": "selective_rotation",
+    "confidence": 0.45,
+    "reason": "Market is constructive but uneven; prefer higher-liquidity assets and tighter invalidation."
+  },
+  "strategy": {
+    "name": "selective_rotation_bnb_ecosystem_rotation",
+    "objective": "Generate a backtestable strategy spec for an autonomous trading agent without executing trades.",
+    "universe": [
+      {
+        "symbol": "BNB",
+        "name": "BNB",
+        "strategyScore": 0.5912,
+        "rationale": [
+          "trend=0.213",
+          "liquidity=0.9525",
+          "volumeChange24h=27.4167%",
+          "rsi14=39"
+        ]
+      },
+      {
+        "symbol": "CAKE",
+        "name": "PancakeSwap",
+        "strategyScore": 0.5104,
+        "rationale": [
+          "trend=0.2681",
+          "liquidity=0.7028",
+          "volumeChange24h=20.6477%",
+          "rsi14=42"
+        ]
+      }
+    ],
+    "signals": [
+      "CMC quotes/latest style price and volume momentum",
+      "CMC technical indicator style RSI and trend score",
+      "CMC derivatives style funding and open-interest change",
+      "CMC social/news momentum style inputs"
+    ],
+    "entryRules": [
+      "Enter only assets in the selected universe.",
+      "Require positive 24h and 7d price momentum.",
+      "Require volume expansion above the market-context baseline.",
+      "Reject entries if RSI exceeds 72 or liquidity score falls below 0.55."
+    ],
+    "exitRules": [
+      "Exit if asset breaks regime support or underperforms BNB by 3%.",
+      "Scale out at 1.4R and close if volume momentum fades."
+    ],
+    "invalidationRules": [
+      "Invalidate if liquidity score drops below 0.55 or stablecoin liquidity trend turns falling."
+    ],
+    "risk": {
+      "maxPortfolioRiskPct": 1,
+      "maxPositionRiskPct": 0.35,
+      "maxOpenPositions": 2,
+      "stopLossRule": "Exit if asset breaks regime support or underperforms BNB by 3%.",
+      "takeProfitRule": "Scale out at 1.4R and close if volume momentum fades.",
+      "invalidationRule": "Invalidate if liquidity score drops below 0.55 or stablecoin liquidity trend turns falling."
+    },
+    "backtest": {
+      "windowDays": 7,
+      "benchmark": "BNB",
+      "requiredMetrics": [
+        "return",
+        "max_drawdown",
+        "sharpe_like_ratio",
+        "win_rate",
+        "rule_adherence"
+      ],
+      "replayInstruction": "Replay against historical CMC-style snapshots; do not execute live orders."
+    }
+  },
+  "sponsorCapabilityMapping": {
+    "coinMarketCap": [
+      "Agent Hub",
+      "Data API",
+      "Data MCP",
+      "Skills Marketplace"
+    ],
+    "x402": "Optional pay-per-call premium data access design; not used in local fixture.",
+    "trustWallet": "Future execution consumer only; not used in local fixture.",
+    "bnbChain": "Future execution venue only; not used in local fixture."
+  }
+}
