@@ -221,10 +221,9 @@ function renderReport({ label, spec, replay }) {
       <h2>Data And Sponsor Mapping</h2>
       <table>
         <tbody>
-          <tr><th>Data source</th><td>${escapeHtml(boundary.source || "n/a")}</td></tr>
-          <tr><th>No live trading</th><td>${escapeHtml(boundary.noLiveTrading)}</td></tr>
-          <tr><th>No wallet connection</th><td>${escapeHtml(boundary.noWalletConnection)}</td></tr>
-          <tr><th>No transaction</th><td>${escapeHtml(boundary.noTransaction)}</td></tr>
+          <tr><th>Data coverage</th><td>${escapeHtml(boundary.source || "n/a")}</td></tr>
+          <tr><th>Agent output</th><td>Strategy Capsule with regime, selected universe, risk budget, invalidation rules, and replay instructions.</td></tr>
+          <tr><th>Human output</th><td>Decision-maker-readable strategy report generated from the same capsule.</td></tr>
         </tbody>
       </table>
       <table>

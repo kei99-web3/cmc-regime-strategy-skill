@@ -112,7 +112,7 @@ function generateStrategySpec(snapshot, options = {}) {
     marketRegime: regime,
     strategy: {
       name: `${regime.label}_bnb_ecosystem_rotation`,
-      objective: "Generate a backtestable strategy spec for an autonomous trading agent without executing trades.",
+      objective: "Generate a backtestable BNB ecosystem strategy capsule from CMC market signals.",
       universe: selectedAssets.map((asset) => ({
         symbol: asset.symbol,
         name: asset.name,
@@ -143,7 +143,7 @@ function generateStrategySpec(snapshot, options = {}) {
         windowDays: horizonDays,
         benchmark: "BNB",
         requiredMetrics: ["return", "max_drawdown", "sharpe_like_ratio", "win_rate", "rule_adherence"],
-        replayInstruction: "Replay against historical CMC-style snapshots; do not execute live orders."
+        replayInstruction: "Replay against historical CMC-style snapshots and compare rule adherence, benchmark return, and drawdown."
       }
     },
     sponsorCapabilityMapping: {

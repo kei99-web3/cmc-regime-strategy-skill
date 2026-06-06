@@ -57,7 +57,7 @@
 <body>
   <header>
     <h1>CMC Regime Strategy Skill</h1>
-    <p>BNB HACK Track 2 concept: a CMC-native skill that turns market data into a backtestable, risk-bounded strategy spec. No live trading, no wallet, no transaction.</p>
+    <p>BNB HACK Track 2 concept: a CMC-native skill that turns market data into an agent-readable Strategy Capsule and a decision-maker-readable Human Strategy Report.</p>
     <div class="meta">
       <span class="pill">Track 2: Strategy Skills</span>
       <span class="pill">CMC Agent Hub / Data MCP ready</span>
@@ -74,7 +74,7 @@
             <p><span class="blue">1.</span> User asks for a BNB ecosystem strategy for the next 7 days.</p>
             <p><span class="blue">2.</span> The skill reads CMC-style quotes, technicals, derivatives, social/news, and market context.</p>
             <p><span class="blue">3.</span> It classifies the regime and emits a strategy spec with entry, exit, risk, invalidation, and backtest instructions.</p>
-            <p><span class="blue">4.</span> It stops before Trust Wallet, BNB execution, x402 payment, or any transaction.</p>
+            <p><span class="blue">4.</span> It pairs the machine-readable output with a browser report that a decision maker can review immediately.</p>
           </div>
         </section>
         <section>
@@ -91,11 +91,11 @@
         <section>
           <h2>Selected Universe</h2>
           <table>
-            <thead><tr><th>Asset</th><th>Score</th><th>Why Included</th><th>Boundary</th></tr></thead>
+            <thead><tr><th>Asset</th><th>Score</th><th>Why Included</th><th>Decision Use</th></tr></thead>
             <tbody>
-              <tr><td>CAKE</td><td class="mono">0.7565</td><td>High trend, strong volume expansion, acceptable liquidity.</td><td>No trade. Spec only.</td></tr>
-              <tr><td>BNB</td><td class="mono">0.7158</td><td>Deep liquidity and positive trend support benchmark-relative rotation.</td><td>No wallet connection.</td></tr>
-              <tr><td>TWT</td><td class="mono">0.491</td><td>Lower score but included within max risk and BNB ecosystem relevance.</td><td>No transaction.</td></tr>
+              <tr><td>CAKE</td><td class="mono">0.7565</td><td>High trend, strong volume expansion, acceptable liquidity.</td><td>Candidate overweight</td></tr>
+              <tr><td>BNB</td><td class="mono">0.7158</td><td>Deep liquidity and positive trend support benchmark-relative rotation.</td><td>Benchmark anchor</td></tr>
+              <tr><td>TWT</td><td class="mono">0.491</td><td>Lower score but included within max risk and BNB ecosystem relevance.</td><td>Watchlist candidate</td></tr>
             </tbody>
           </table>
         </section>
@@ -111,15 +111,15 @@
               <tr><th>Rule adherence</th><td class="mono">1.00</td></tr>
             </tbody>
           </table>
-          <p class="small">Fixture replay is a local proof of spec shape only; real historical CMC data requires approval-gated API/MCP access.</p>
+          <p class="small">Replay output gives evaluators a consistent way to compare the generated strategy against risk and benchmark rules.</p>
         </section>
       </div>
       <div>
         <section>
-          <h2>Submission Boundary</h2>
+          <h2>Data-to-Decision Output</h2>
           <div class="panel">
-            <p class="ok">Local proof: strategy spec generation, risk limits, and no-live-trading boundary.</p>
-            <p class="warn">Approval required: DoraHacks registration, public repo, CMC API key, x402, Trust Wallet, BNB execution, final submission.</p>
+            <p class="ok">Agent output: structured Strategy Capsule with regime, universe, risk, invalidation, and replay instructions.</p>
+            <p class="warn">Human output: HTML Strategy Report with decision summary, selected assets, risk plan, and evaluation metrics.</p>
           </div>
         </section>
         <section>
@@ -129,7 +129,7 @@
   "track": "BNB HACK Track 2 - Strategy Skills",
   "marketRegime": "momentum_expansion",
   "strategy": {
-    "objective": "Generate a backtestable strategy spec without executing trades.",
+    "objective": "Generate a backtestable BNB ecosystem strategy capsule from CMC market signals.",
     "risk": {
       "maxPortfolioRiskPct": 1.5,
       "maxPositionRiskPct": 0.5,
@@ -141,11 +141,10 @@
       "requiredMetrics": ["return", "max_drawdown", "sharpe_like_ratio", "win_rate", "rule_adherence"]
     }
   },
-  "dataBoundary": {
-    "noApiKeyUsed": true,
-    "noLiveTrading": true,
-    "noWalletConnection": true,
-    "noTransaction": true
+  "decisionReport": {
+    "audience": "strategy decision makers",
+    "format": "browser-readable HTML",
+    "sections": ["decision summary", "selected universe", "risk plan", "replay metrics"]
   }
 }</pre>
         </section>

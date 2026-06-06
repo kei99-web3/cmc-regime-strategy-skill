@@ -145,7 +145,7 @@ async function buildBasicSnapshot() {
 
   return {
     asOf: new Date().toISOString(),
-    sourceModel: "CMC Basic API; free key, read-only market data, no wallet, no payment, no transaction.",
+    sourceModel: "CMC Basic API; free key, read-only market data.",
     sourceUrls: {
       quotes: quotesUrl,
       globalMetrics: globalUrl,
