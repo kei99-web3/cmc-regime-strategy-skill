@@ -1,8 +1,8 @@
 ---
 type: dorahacks_submission_draft
 target: BNB HACK / Track 2 Strategy Skills
-updated: 2026-06-06
-status: draft_not_submitted
+updated: 2026-06-07
+status: ready_for_submission_form_not_submitted
 ---
 
 # DoraHacks Submission Draft
@@ -91,8 +91,6 @@ This project does not:
 
 ## Links
 
-To be filled after user approval:
-
-- Public GitHub repo:
-- Demo video:
+- Public GitHub repo: https://github.com/kei99-web3/cmc-regime-strategy-skill
+- Demo video: https://youtu.be/Sw5WBFfXO5w
 - DoraHacks project page:
