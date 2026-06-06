@@ -1,8 +1,8 @@
 ---
 type: dorahacks_field_map
 target: BNB HACK / DoraHacks submission
-updated: 2026-06-06
-status: ready_for_user_review_not_submitted
+updated: 2026-06-07
+status: ready_for_submission_form_not_submitted
 ---
 
 # DoraHacks Field Map
@@ -49,11 +49,11 @@ The project is designed as the decision layer before execution agents. Strategy 
 
 ## Repository URL
 
-To be filled after public repo approval.
+https://github.com/kei99-web3/cmc-regime-strategy-skill
 
 ## Demo Video URL
 
-To be filled after video recording/upload approval.
+https://youtu.be/Sw5WBFfXO5w
 
 ## Submission Notes
 
@@ -61,6 +61,4 @@ No wallet connection, x402 payment, live order, test order, transaction signing,
 
 ## User Approval Gates Remaining
 
-- Create/push public GitHub repository.
-- Upload demo video.
 - Fill and submit DoraHacks form.
